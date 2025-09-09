@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to VR - Portfolio 1 Assignment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link.active {
+            border-bottom-color: #0d9488; /* teal-600 */
+            color: #0f766e; /* teal-700 */
+            font-weight: 600;
+        }
+    </style>
+    <!-- Chosen Palette: Warm Neutrals with Teal Accent -->
+    <!-- Application Structure Plan: A single-page application with a tabbed navigation interface. The structure includes a header, a navigation bar, and distinct content sections for "Overview," each of the four "Demos," and "Submission & Grading." This design was chosen to break down the dense information of the assignment into manageable, focused sections. It prevents overwhelming the user with a long scroll and allows them to quickly jump to the information they need, which is ideal for a document they will reference multiple times. The user flow is non-linear, letting students check requirements for a specific demo or review the grading rubric at any time. -->
+    <!-- Visualization & Content Choices: Report Info: Assignment details -> Goal: Inform/Organize -> Viz/Presentation Method: Styled text blocks, lists, and a table -> Interaction: Tab-based navigation (clicking tabs shows/hides content sections) -> Justification: This approach provides the clearest and most intuitive way to present a structured document like a course assignment. Traditional visualizations like charts are not applicable. The primary goal is clarity and ease of access, which the tabbed layout and clean typography achieve effectively. The submission requirements are presented as a checklist for clarity, and the grading rubric is a styled HTML table, which is the standard and best way to display such information. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="bg-stone-50 text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-teal-800">Introduction to Virtual Reality</h1>
+            <p class="text-xl md:text-2xl text-slate-600 mt-2">Portfolio 1 Assignment</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="flex flex-wrap justify-center border-b-2 border-stone-200 mb-8">
+            <a href="#" class="nav-link active text-lg py-3 px-4 md:px-6 border-b-4 border-transparent hover:border-teal-500 hover:text-teal-600 transition-colors" data-target="overview">Overview</a>
+            <a href="#" class="nav-link text-lg py-3 px-4 md:px-6 border-b-4 border-transparent hover:border-teal-500 hover:text-teal-600 transition-colors" data-target="demo1">Demo 1</a>
+            <a href="#" class="nav-link text-lg py-3 px-4 md:px-6 border-b-4 border-transparent hover:border-teal-500 hover:text-teal-600 transition-colors" data-target="demo2">Demo 2</a>
+            <a href="#" class="nav-link text-lg py-3 px-4 md:px-6 border-b-4 border-transparent hover:border-teal-500 hover:text-teal-600 transition-colors" data-target="demo3">Demo 3</a>
+            <a href="#" class="nav-link text-lg py-3 px-4 md:px-6 border-b-4 border-transparent hover:border-teal-500 hover:text-teal-600 transition-colors" data-target="demo4">Demo 4</a>
+            <a href="#" class="nav-link text-lg py-3 px-4 md:px-6 border-b-4 border-transparent hover:border-teal-500 hover:text-teal-600 transition-colors" data-target="submission">Submission & Grading</a>
+        </nav>
+
+        <!-- Content Sections -->
+        <main id="content-sections">
+            <!-- Overview Section -->
+            <section id="overview" class="content-section">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
+                    <h2 class="text-2xl font-bold text-teal-700 mb-4">Assignment Overview</h2>
+                    <p class="text-slate-600 mb-4">This assignment is the first of two major portfolio projects for this course. The goal of this portfolio is to demonstrate your understanding and application of core concepts in virtual reality development. You will create four distinct demonstrations, each focusing on different fundamental aspects of VR creation: 3D transformations and lighting, physics simulation, VR interaction, and advanced object manipulation.</p>
+                    <p class="text-slate-600 mb-6">This is an individual project. While you may discuss concepts with your peers, the implementation and final submission must be your own work.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-teal-50 border-l-4 border-teal-500 p-4 rounded-r-lg">
+                            <h3 class="font-semibold text-lg text-teal-800">Due Date</h3>
+                            <p class="text-2xl font-bold text-teal-600">Tuesday, October 7, 2025</p>
+                        </div>
+                        <div class="bg-sky-50 border-l-4 border-sky-500 p-4 rounded-r-lg">
+                            <h3 class="font-semibold text-lg text-sky-800">General Requirements</h3>
+                            <ul class="list-disc list-inside mt-2 text-sky-700 space-y-1">
+                                <li>All four demos must be created using <strong>Unity3D</strong>.</li>
+                                <li>Projects should be well-organized with commented code.</li>
+                                <li>Submission is via a provided <strong>GitHub Classrooms repository</strong>.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 text-center bg-teal-50/50 p-6 rounded-lg border border-teal-200">
+                        <h3 class="font-semibold text-lg text-teal-800 mb-2">Get Started</h3>
+                        <p class="text-slate-600 mb-4">Click the button below to accept the assignment and create your repository on GitHub Classroom.</p>
+                        <a href="https://classroom.github.com/a/L_wlxIlW" target="_blank" class="inline-block bg-slate-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-slate-900 transition-transform hover:scale-105">
+                            Accept Assignment on GitHub Classroom
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Demo 1 Section -->
+            <section id="demo1" class="content-section hidden">
+                 <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🪐</span>
+                        <h2 class="text-2xl font-bold text-teal-700">Demo 1: Solar System Simulation</h2>
+                    </div>
+                    <p class="text-slate-600 mb-2"><strong>Objective:</strong> To demonstrate foundational skills in 3D transformations, object hierarchies, and lighting by creating a basic model of the Sun, Earth, and the Moon.</p>
+                    <p class="mb-6 text-slate-500">This section outlines the core requirements for building your solar system model. Focus on the accuracy of the motion and lighting principles.</p>
+                    <h3 class="font-semibold text-lg text-slate-700 mb-3">Core Requirements:</h3>
+                    <ul class="list-disc list-outside space-y-3 pl-5 text-slate-600">
+                        <li><strong>Scene Objects:</strong> Your scene must contain at least three primary objects representing the Sun, the Earth, and the Moon. Use various Materials to create better visuals (colors or Texture Maps).</li>
+                        <li><strong>Orbital Mechanics:</strong> The Earth must orbit the Sun, and the Moon must orbit the Earth. Prioritize accurate relative orbital periods and distances (scaled for viewability).</li>
+                        <li><strong>Earth's Rotation and Tilt:</strong> The Earth must rotate on its own axis, tilted at approximately 23.5 degrees to demonstrate the cause of seasons.</li>
+                        <li><strong>Lighting:</strong> The Sun must be the primary light source, dynamically illuminating the Earth and Moon to create correct day/night cycles and moon phases.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Demo 2 Section -->
+            <section id="demo2" class="content-section hidden">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">⚙️</span>
+                        <h2 class="text-2xl font-bold text-teal-700">Demo 2: Rube Goldberg Physics Machine</h2>
+                    </div>
+                    <p class="text-slate-600 mb-2"><strong>Objective:</strong> To demonstrate proficiency with the physics engine, including rigid bodies, colliders, joints, and event-driven actions.</p>
+                    <p class="mb-6 text-slate-500">This demo is all about cause and effect. Build a chain reaction that is entirely driven by Unity's physics system.</p>
+                    <h3 class="font-semibold text-lg text-slate-700 mb-3">Core Requirements:</h3>
+                    <ul class="list-disc list-outside space-y-3 pl-5 text-slate-600">
+                        <li><strong>Chain Reaction:</strong> Create a sequence of at least <strong>five</strong> distinct, connected physical events.</li>
+                        <li><strong>Physics-Driven:</strong> The entire chain reaction must be driven by the physics engine, not manual animation.</li>
+                        <li><strong>Collision and Events:</strong> Connections between events must be based on physics interactions (collisions, triggers).</li>
+                        <li><strong>The "Trap":</strong> The final event must be a clear action, like a cage falling or a platform dropping.</li>
+                        <li><strong>Custom Model:</strong> At least one of the objects in your simulation must be something you personally modeled in Blender (or a similar program).</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Demo 3 Section -->
+            <section id="demo3" class="content-section hidden">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🎯</span>
+                        <h2 class="text-2xl font-bold text-teal-700">Demo 3: Basic VR Exergame</h2>
+                    </div>
+                    <p class="text-slate-600 mb-2"><strong>Objective:</strong> To create a simple, functional rhythm-based exercise game that utilizes tracked VR controllers, demonstrating an understanding of player movement and interaction in a VR space.</p>
+                    <p class="mb-6 text-slate-500">Build a game that gets the player moving. The focus is on translating physical hand movements into successful game interactions.</p>
+                    <h3 class="font-semibold text-lg text-slate-700 mb-3">Core Requirements:</h3>
+                    <ul class="list-disc list-outside space-y-3 pl-5 text-slate-600">
+                        <li><strong>VR Headset and Controllers:</strong> The game must run on a VR headset and use two tracked hand controllers.</li>
+                        <li><strong>Gameplay Loop:</strong> Objects must be generated and move towards the player, who must physically hit them with their controllers.</li>
+                        <li><strong>Interaction and Feedback:</strong> Provide clear visual or audio feedback for successful hits. Implement a scoring system.</li>
+                        <li><strong>User Interface (UI):</strong> A simple, in-world UI element must display the player's current score.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Demo 4 Section -->
+            <section id="demo4" class="content-section hidden">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🧩</span>
+                        <h2 class="text-2xl font-bold text-teal-700">Demo 4: Interactive Puzzle Game</h2>
+                    </div>
+                    <p class="text-slate-600 mb-2"><strong>Objective:</strong> To design and build an interactive puzzle that requires the player to use advanced object manipulation skills—such as selecting, grabbing, releasing, and throwing—to reach a solution.</p>
+                    <p class="mb-6 text-slate-500">This is your chance to be creative. Design a puzzle where the solution depends on direct, nuanced object manipulation in VR.</p>
+                    <h3 class="font-semibold text-lg text-slate-700 mb-3">Core Requirements:</h3>
+                    <ul class="list-disc list-outside space-y-3 pl-5 text-slate-600">
+                        <li><strong>Advanced Manipulation:</strong> Implement selecting/highlighting, intuitive grabbing/releasing, and realistic throwing of objects.</li>
+                        <li><strong>Puzzle Design:</strong> Create a puzzle with a clear goal and solution that depends on the direct manipulation of objects (e.g., placing gears, arranging blocks, using a key).</li>
+                        <li><strong>State Management:</strong> The game must track the puzzle's state and recognize when it has been solved.</li>
+                        <li><strong>Feedback and Completion:</strong> Provide clear audio-visual feedback when the player successfully solves the puzzle.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Submission Section -->
+            <section id="submission" class="content-section hidden">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm mb-8">
+                    <h2 class="text-2xl font-bold text-teal-700 mb-4">Submission & Repository Requirements</h2>
+                    <p class="mb-6 text-slate-500">Follow these instructions carefully to ensure your project is submitted correctly. Your repository organization and commit history are part of your grade.</p>
+                    <ul class="list-none space-y-4">
+                        <li class="flex items-start"><span class="text-teal-500 font-bold text-xl mr-3 mt-1">✓</span><div><strong>GitHub Repository:</strong> All work will be submitted via the official GitHub Classroom link (available on the Overview tab). Your repository structure must be exactly as follows, with these top-level folders: `Demo1_Transformation`, `Demo2_Physics`, `Demo3_Immersion`, and `Demo4_Interaction`.</div></li>
+                        <li class="flex items-start"><span class="text-teal-500 font-bold text-xl mr-3 mt-1">✓</span><div><strong>Main README:</strong> In the root of your repository, include a `README.md` with your name, a headshot picture, and a brief bio (max 100 words).</div></li>
+                        <li class="flex items-start"><span class="text-teal-500 font-bold text-xl mr-3 mt-1">✓</span><div><strong>Demo README and Video:</strong> Inside each of the four project folders, you **must** include a `README.md` file that contains a description and a link to/embedded video of your demo.</div></li>
+                        <li class="flex items-start"><span class="text-teal-500 font-bold text-xl mr-3 mt-1">✓</span><div><strong>Video Requirements:</strong> Each video must be max 2 minutes, demonstrate core functionality, and have a voice-over explanation. <strong class="text-red-600">Critically, you must verify that your video is publicly accessible and does not require any permissions to view.</strong></div></li>
+                        <li class="flex items-start"><span class="text-teal-500 font-bold text-xl mr-3 mt-1">✓</span><div><strong>Commit History:</strong> Commit your work regularly to show progress. A single, large commit is not acceptable.</div></li>
+                        <li class="flex items-start"><span class="text-teal-500 font-bold text-xl mr-3 mt-1">✓</span><div><strong>.gitignore:</strong> Use a standard Unity `.gitignore` file to avoid committing generated files like the `Library` folder.</div></li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
+                    <h2 class="text-2xl font-bold text-teal-700 mb-4">Grading Rubric</h2>
+                    <p class="mb-6 text-slate-500">The project is graded on demo functionality (80%) and project management/Git usage (20%).</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-slate-100">
+                                    <th class="p-3 font-semibold text-sm text-slate-600 border-b border-slate-200">Criteria</th>
+                                    <th class="p-3 font-semibold text-sm text-slate-600 border-b border-slate-200">Does Not Meet Expectations (0-10 pts)</th>
+                                    <th class="p-3 font-semibold text-sm text-slate-600 border-b border-slate-200">Meets Expectations (11-16 pts)</th>
+                                    <th class="p-3 font-semibold text-sm text-slate-600 border-b border-slate-200">Exceeds Expectations (17-20 pts)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border-b border-slate-200 font-medium">Demo 1: Functionality</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">Core mechanics are missing or non-functional.</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">All core requirements are met and function as expected.</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">Simulation includes extra details like accurate textures or an orbiting camera.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 bg-slate-50/50">
+                                    <td class="p-3 border-b border-slate-200 font-medium">Demo 2: Physics</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">Chain reaction is too short, not physics-driven, or no custom model.</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">The machine works reliably and meets all requirements.</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">Physics simulation is complex, creative, and highly reliable.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border-b border-slate-200 font-medium">Demo 3: VR Interaction</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">Game is not playable in VR, or interactions/scoring are broken.</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">The exergame is fully playable with working score and feedback.</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">Gameplay is polished with satisfying feedback and clear immersion.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 bg-slate-50/50">
+                                    <td class="p-3 border-b border-slate-200 font-medium">Demo 4: Puzzle & Manipulation</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">Manipulation is broken, or puzzle is unsolvable.</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">Player can manipulate objects; puzzle is functional and solvable.</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">Puzzle design is clever and manipulation feels polished.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 border-b border-slate-200 font-medium">Git & Project Management</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">Repository disorganized, few commits, READMEs/videos missing.</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">Well-organized repository, regular commits, all READMEs/videos are complete.</td>
+                                    <td class="p-3 border-b border-slate-200 text-slate-600">Clean, descriptive commit history; professional workflow.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('data-target');
+                    
+                    navLinks.forEach(navLink => navLink.classList.remove('active'));
+                    this.classList.add('active');
+
+                    contentSections.forEach(section => {
+                        section.classList.toggle('hidden', section.id !== targetId);
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
