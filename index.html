@@ -16,21 +16,15 @@
             font-weight: 600;
         }
     </style>
-    <!-- Chosen Palette: Warm Neutrals with Teal Accent -->
-    <!-- Application Structure Plan: A single-page application with a tabbed navigation interface. The structure includes a header, a navigation bar, and distinct content sections for "Overview," each of the four "Demos," and "Submission & Grading." This design was chosen to break down the dense information of the assignment into manageable, focused sections. It prevents overwhelming the user with a long scroll and allows them to quickly jump to the information they need, which is ideal for a document they will reference multiple times. The user flow is non-linear, letting students check requirements for a specific demo or review the grading rubric at any time. -->
-    <!-- Visualization & Content Choices: Report Info: Assignment details -> Goal: Inform/Organize -> Viz/Presentation Method: Styled text blocks, lists, and a table -> Interaction: Tab-based navigation (clicking tabs shows/hides content sections) -> Justification: This approach provides the clearest and most intuitive way to present a structured document like a course assignment. Traditional visualizations like charts are not applicable. The primary goal is clarity and ease of access, which the tabbed layout and clean typography achieve effectively. The submission requirements are presented as a checklist for clarity, and the grading rubric is a styled HTML table, which is the standard and best way to display such information. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-</head>
+    </head>
 <body class="bg-stone-50 text-slate-800">
 
     <div class="container mx-auto p-4 md:p-8 max-w-7xl">
-        <!-- Header -->
         <header class="text-center mb-8">
             <h1 class="text-3xl md:text-4xl font-bold text-teal-800">Introduction to Virtual Reality</h1>
             <p class="text-xl md:text-2xl text-slate-600 mt-2">Portfolio 1 Assignment</p>
         </header>
 
-        <!-- Navigation -->
         <nav class="flex flex-wrap justify-center border-b-2 border-stone-200 mb-8">
             <a href="#" class="nav-link active text-lg py-3 px-4 md:px-6 border-b-4 border-transparent hover:border-teal-500 hover:text-teal-600 transition-colors" data-target="overview">Overview</a>
             <a href="#" class="nav-link text-lg py-3 px-4 md:px-6 border-b-4 border-transparent hover:border-teal-500 hover:text-teal-600 transition-colors" data-target="demo1">Demo 1</a>
@@ -38,11 +32,10 @@
             <a href="#" class="nav-link text-lg py-3 px-4 md:px-6 border-b-4 border-transparent hover:border-teal-500 hover:text-teal-600 transition-colors" data-target="demo3">Demo 3</a>
             <a href="#" class="nav-link text-lg py-3 px-4 md:px-6 border-b-4 border-transparent hover:border-teal-500 hover:text-teal-600 transition-colors" data-target="demo4">Demo 4</a>
             <a href="#" class="nav-link text-lg py-3 px-4 md:px-6 border-b-4 border-transparent hover:border-teal-500 hover:text-teal-600 transition-colors" data-target="submission">Submission & Grading</a>
+            <a href="#" class="nav-link text-lg py-3 px-4 md:px-6 border-b-4 border-transparent hover:border-teal-500 hover:text-teal-600 transition-colors" data-target="graduate">Graduate Students</a>
         </nav>
 
-        <!-- Content Sections -->
         <main id="content-sections">
-            <!-- Overview Section -->
             <section id="overview" class="content-section">
                 <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
                     <h2 class="text-2xl font-bold text-teal-700 mb-4">Assignment Overview</h2>
@@ -74,7 +67,6 @@
                 </div>
             </section>
 
-            <!-- Demo 1 Section -->
             <section id="demo1" class="content-section hidden">
                  <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
                     <div class="flex items-center mb-4">
@@ -93,7 +85,6 @@
                 </div>
             </section>
 
-            <!-- Demo 2 Section -->
             <section id="demo2" class="content-section hidden">
                 <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
                     <div class="flex items-center mb-4">
@@ -113,7 +104,6 @@
                 </div>
             </section>
             
-            <!-- Demo 3 Section -->
             <section id="demo3" class="content-section hidden">
                 <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
                     <div class="flex items-center mb-4">
@@ -132,7 +122,6 @@
                 </div>
             </section>
 
-            <!-- Demo 4 Section -->
             <section id="demo4" class="content-section hidden">
                 <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
                     <div class="flex items-center mb-4">
@@ -151,7 +140,6 @@
                 </div>
             </section>
 
-            <!-- Submission Section -->
             <section id="submission" class="content-section hidden">
                 <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm mb-8">
                     <h2 class="text-2xl font-bold text-teal-700 mb-4">Submission & Repository Requirements</h2>
@@ -215,6 +203,24 @@
                     </div>
                 </div>
             </section>
+
+            <section id="graduate" class="content-section hidden">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🎓</span>
+                        <h2 class="text-2xl font-bold text-teal-700">Graduate Student Requirements</h2>
+                    </div>
+                    <p class="text-slate-600 mb-6">In addition to the four demos, graduate students are required to complete two paper reviews. These reviews will be submitted in a top-level folder named `PaperReviews` in your GitHub repository.</p>
+                    <h3 class="font-semibold text-lg text-slate-700 mb-3">Paper Review Instructions:</h3>
+                    <ul class="list-none space-y-4 text-slate-600">
+                        <li class="flex items-start"><span class="text-teal-500 font-bold text-xl mr-3 mt-1">✓</span><div><strong>Format and Length:</strong> You must submit two reviews, each as a separate markdown file (e.g., `review1.md`, `review2.md`). Each review should be approximately 300-500 words.</div></li>
+                        <li class="flex items-start"><span class="text-teal-500 font-bold text-xl mr-3 mt-1">✓</span><div><strong>Paper Sourcing:</strong> Papers must come from reputable, peer-reviewed sources (e.g., IEEE VR, ACM SIGGRAPH, CHI) and must have been published within the last 5 years.</div></li>
+                        <li class="flex items-start"><span class="text-teal-500 font-bold text-xl mr-3 mt-1">✓</span><div><strong>Citation:</strong> A full citation for the reviewed paper must be included at the top of each markdown file.</div></li>
+                        <li class="flex items-start"><span class="text-teal-500 font-bold text-xl mr-3 mt-1">✓</span><div><strong>Critical Evaluation:</strong> Your reviews must not be simple summaries of the abstract. They should be critical evaluations of the research, discussing its strengths, weaknesses, methodology, and potential impact.</div></li>
+                        <li class="flex items-start"><span class="text-teal-500 font-bold text-xl mr-3 mt-1">✓</span><div><strong>Use of Generative AI:</strong> You may use generative AI as a secondary step to help organize your thoughts or clean up your writing, but the core analysis and critique must be your own.</div></li>
+                    </ul>
+                </div>
+            </section>
         </main>
     </div>
 
@@ -241,4 +247,3 @@
 
 </body>
 </html>
-
